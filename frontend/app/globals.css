@@ -1,0 +1,285 @@
+/* This line injects Tailwind base styles. */
+@tailwind base;
+/* This line injects Tailwind component styles. */
+@tailwind components;
+/* This line injects Tailwind utility styles. */
+@tailwind utilities;
+
+/* This line defines root color variables for glassmorphism UI. */
+:root {
+  /* This line sets dark background base color. */
+  --bg-a: #0a0a0a;
+  /* This line sets secondary gradient color. */
+  --bg-b: #0f1222;
+  /* This line sets tertiary gradient color. */
+  --bg-c: #141935;
+}
+
+/* This line styles body with anti-gravity cosmic background. */
+body {
+  /* This line resets default margin. */
+  margin: 0;
+  /* This line sets minimum viewport height. */
+  min-height: 100vh;
+  /* This line sets solid dark charcoal background as requested. */
+  background-color: #0a0a0a;
+  /* This line adds subtle animation-friendly text color. */
+  color: #f7f8ff;
+  /* This line applies modern sans-serif typography stack. */
+  font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* This class styles reusable floating glass panels. */
+.glass-panel {
+  /* bg-white/5 */
+  background-color: rgba(255, 255, 255, 0.05);
+  /* backdrop-blur-xl */
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  /* border border-white/10 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* drop shadow depth */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* This class styles neon outlines for visual emphasis. */
+.neon-outline {
+  /* This line draws thin cyan neon border. */
+  border: 1px solid rgba(94, 242, 255, 0.68);
+  /* This line adds outer glow around edges. */
+  box-shadow: 0 0 24px rgba(94, 242, 255, 0.3);
+}
+
+/* This class animates the center logo line to emulate tracked head tilts. */
+.logo-tilt {
+  /* This line sets transform origin to line center for rotation. */
+  transform-origin: center;
+  /* This line applies infinite tilt animation sequence. */
+  animation: tilt 3s ease-in-out infinite;
+}
+
+/* This class creates animated beam around result card border. */
+.beam-border::before {
+  /* This line creates pseudo element content for border beam. */
+  content: "";
+  /* This line positions pseudo element to fill container. */
+  position: absolute;
+  /* This line extends beam slightly beyond card for glow bleed. */
+  inset: -1px;
+  /* This line sets rounded shape to match parent corners. */
+  border-radius: inherit;
+  /* This line applies rotating conic gradient for beam effect. */
+  background: conic-gradient(from 0deg, transparent 0deg, rgba(34, 211, 238, 0.85) 85deg, transparent 160deg, transparent 360deg);
+  /* This line animates beam rotation continuously. */
+  animation: rotate-beam 2.2s linear infinite;
+  /* This line masks center area to keep only border visible. */
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  /* This line combines masks to reveal border ring only. */
+  -webkit-mask-composite: xor;
+  /* This line keeps standard mask composite for compatibility. */
+  mask-composite: exclude;
+  /* This line sets internal border thickness for beam ring. */
+  padding: 2px;
+}
+
+/* This class creates a green pulse border for nodding detection. */
+.movement-pulse-green {
+  /* This line sets green-tinted border color for affirmative action. */
+  border-color: rgba(74, 222, 128, 0.6);
+  /* This line applies repeated pulse glow around movement section. */
+  animation: pulse-green 1.6s ease-in-out infinite;
+}
+
+/* This class creates a red pulse border for shaking detection. */
+.movement-pulse-red {
+  /* This line sets red-tinted border color for negative action. */
+  border-color: rgba(248, 113, 113, 0.65);
+  /* This line applies repeated pulse glow around movement section. */
+  animation: pulse-red 1.6s ease-in-out infinite;
+}
+
+/* This class creates a gold pulse border for tilting detection. */
+.movement-pulse-gold {
+  /* This line sets gold-tinted border color for questioning action. */
+  border-color: rgba(250, 204, 21, 0.65);
+  /* This line applies repeated pulse glow around movement section. */
+  animation: pulse-gold 1.6s ease-in-out infinite;
+}
+
+/* This class creates a blue pulse border for neutral fallback state. */
+.movement-pulse-blue {
+  /* This line sets blue-tinted border color for unknown action. */
+  border-color: rgba(147, 197, 253, 0.55);
+  /* This line applies repeated pulse glow around movement section. */
+  animation: pulse-blue 1.8s ease-in-out infinite;
+}
+
+/* This class provides a bright animated CTA button style. */
+.vivid-cta {
+  /* This line creates a stronger gradient for better button visibility. */
+  background: linear-gradient(90deg, rgba(10, 207, 255, 0.5), rgba(92, 137, 255, 0.52));
+  /* This line sets a sharper border for clear separation from background. */
+  border: 1px solid rgba(194, 244, 255, 0.78);
+  /* This line increases button glow for stronger visual hierarchy. */
+  box-shadow: 0 10px 30px rgba(38, 203, 255, 0.28);
+}
+
+/* This class animates a gentle floating motion on cards. */
+.float-slow {
+  /* This line applies a continuous smooth floating animation. */
+  animation: float-slow 4.4s ease-in-out infinite;
+}
+
+/* This class animates subtle shimmer for active controls. */
+.shimmer {
+  /* This line sets background sizing for shimmer movement. */
+  background-size: 180% 180%;
+  /* This line applies continuous gradient shift animation. */
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+
+/* This keyframe creates slow vertical floating movement. */
+@keyframes float-slow {
+  /* This frame sets initial position. */
+  0% {
+    transform: translateY(0px);
+  }
+  /* This frame sets upper float position. */
+  50% {
+    transform: translateY(-6px);
+  }
+  /* This frame returns to initial position. */
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* This keyframe animates moving gradient sheen. */
+@keyframes shimmer {
+  /* This frame starts the gradient on the left side. */
+  0% {
+    background-position: 0% 50%;
+  }
+  /* This frame moves gradient to right side. */
+  50% {
+    background-position: 100% 50%;
+  }
+  /* This frame resets gradient to starting position. */
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* This keyframe animates the logo axis line left-right tilt. */
+@keyframes tilt {
+  /* This frame starts from slight left rotation. */
+  0% {
+    transform: rotate(-8deg);
+  }
+  /* This frame moves line to slight right rotation. */
+  50% {
+    transform: rotate(8deg);
+  }
+  /* This frame returns line to slight left rotation. */
+  100% {
+    transform: rotate(-8deg);
+  }
+}
+
+/* This keyframe rotates the border beam around result card. */
+@keyframes rotate-beam {
+  /* This frame starts with base angle. */
+  0% {
+    transform: rotate(0deg);
+  }
+  /* This frame completes full turn for looped beam. */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* This keyframe animates green pulse intensity for nodding states. */
+@keyframes pulse-green {
+  /* This frame sets low starting glow intensity. */
+  0% {
+    box-shadow: 0 0 0 rgba(74, 222, 128, 0.0);
+  }
+  /* This frame sets maximum green glow intensity. */
+  50% {
+    box-shadow: 0 0 22px rgba(74, 222, 128, 0.36);
+  }
+  /* This frame returns glow to low intensity. */
+  100% {
+    box-shadow: 0 0 0 rgba(74, 222, 128, 0.0);
+  }
+}
+
+/* This keyframe animates red pulse intensity for shaking states. */
+@keyframes pulse-red {
+  /* This frame sets low starting glow intensity. */
+  0% {
+    box-shadow: 0 0 0 rgba(248, 113, 113, 0.0);
+  }
+  /* This frame sets maximum red glow intensity. */
+  50% {
+    box-shadow: 0 0 22px rgba(248, 113, 113, 0.36);
+  }
+  /* This frame returns glow to low intensity. */
+  100% {
+    box-shadow: 0 0 0 rgba(248, 113, 113, 0.0);
+  }
+}
+
+/* This keyframe animates gold pulse intensity for tilting states. */
+@keyframes pulse-gold {
+  /* This frame sets low starting glow intensity. */
+  0% {
+    box-shadow: 0 0 0 rgba(250, 204, 21, 0.0);
+  }
+  /* This frame sets maximum gold glow intensity. */
+  50% {
+    box-shadow: 0 0 22px rgba(250, 204, 21, 0.38);
+  }
+  /* This frame returns glow to low intensity. */
+  100% {
+    box-shadow: 0 0 0 rgba(250, 204, 21, 0.0);
+  }
+}
+
+/* This keyframe animates blue pulse intensity for neutral states. */
+@keyframes pulse-blue {
+  /* This frame sets low starting glow intensity. */
+  0% {
+    box-shadow: 0 0 0 rgba(147, 197, 253, 0.0);
+  }
+  /* This frame sets maximum blue glow intensity. */
+  50% {
+    box-shadow: 0 0 22px rgba(147, 197, 253, 0.3);
+  }
+  /* This frame returns glow to low intensity. */
+  100% {
+    box-shadow: 0 0 0 rgba(147, 197, 253, 0.0);
+  }
+}
+
+/* This class provides a subtle animated pulse during loading states. */
+.processing-glow {
+  /* This line applies a reusable glow animation. */
+  animation: vivid-pulse 1.2s ease-in-out infinite;
+}
+
+/* This keyframe drives repeated scale + glow transitions. */
+@keyframes vivid-pulse {
+  /* This frame defines resting glow intensity. */
+  0% {
+    box-shadow: 0 0 0 rgba(94, 242, 255, 0.0), 0 0 0 rgba(114, 255, 201, 0.0);
+  }
+  /* This frame defines peak glow intensity. */
+  50% {
+    box-shadow: 0 0 24px rgba(94, 242, 255, 0.28), 0 0 42px rgba(114, 255, 201, 0.2);
+  }
+  /* This frame returns to resting glow intensity. */
+  100% {
+    box-shadow: 0 0 0 rgba(94, 242, 255, 0.0), 0 0 0 rgba(114, 255, 201, 0.0);
+  }
+}
