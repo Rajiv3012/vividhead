@@ -84,5 +84,5 @@ npm run dev
 Open `http://localhost:3000` and upload an `.mp4` to test the full pipeline.
 
 ## Deployment Targets
-- Backend Space: <https://huggingface.co/spaces/01mayankk/computervision-backend>
+- Backend Space: <http://ec2-35-154-80-83.ap-south-1.compute.amazonaws.com:7860/docs>
 - Frontend Platform: Vercel (Edge Runtime where possible)
