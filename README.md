@@ -57,6 +57,7 @@ vividhead/
 ├── README.md                  # Global documentation
 └── .gitignore                 # Git ignore patterns
 ```
+<img width="1917" height="986" alt="image" src="https://github.com/user-attachments/assets/3cb877d3-4366-4958-b52e-e3bda065924a" />
 
 ## Quick Start
 
